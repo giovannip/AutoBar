@@ -1,5 +1,5 @@
 <?php 
-class AppSchema extends CakeSchema {
+class AppSchema extends SqliteSchema {
 
 	public function before($event = array()) {
 		return true;
@@ -9,7 +9,7 @@ class AppSchema extends CakeSchema {
 	}
 
 	public $mesa = array(
-		'id' => array('type' => 'biginteger', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
+		'id' => array('type' => 'biginteger', 'autoincrement' => true, 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
