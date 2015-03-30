@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Mesa Model
  *
+ * @property StatusMesa $StatusMesa
  * @property Pedido $Pedido
  */
 class Mesa extends AppModel {
@@ -14,25 +15,23 @@ class Mesa extends AppModel {
  */
 	public $useTable = 'mesa';
 
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
 /**
- * Validation rules
+ * belongsTo associations
  *
  * @var array
  */
-	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
+	public $belongsTo = array(
+		'StatusMesa' => array(
+			'className' => 'StatusMesa',
+			'foreignKey' => 'status_mesa_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
  * hasMany associations

@@ -1,11 +1,11 @@
 <?php
-App::uses('ProdutosController', 'Controller');
+App::uses('ProdutoEstoquesController', 'Controller');
 
 /**
- * ProdutosController Test Case
+ * ProdutoEstoquesController Test Case
  *
  */
-class ProdutosControllerTest extends ControllerTestCase {
+class ProdutoEstoquesControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,6 +13,7 @@ class ProdutosControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.produto_estoque',
 		'app.produto',
 		'app.pedido',
 		'app.mesa',

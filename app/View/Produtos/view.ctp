@@ -48,9 +48,9 @@
 		<th><?php echo __('Name'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
-		<th><?php echo __('Mesa Id'); ?></th>
 		<th><?php echo __('Produto Id'); ?></th>
-		<th><?php echo __('Quantidade'); ?></th>
+		<th><?php echo __('Mesa Id'); ?></th>
+		<th><?php echo __('Status Pedido Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($produto['Pedido'] as $pedido): ?>
@@ -59,9 +59,9 @@
 			<td><?php echo $pedido['name']; ?></td>
 			<td><?php echo $pedido['created']; ?></td>
 			<td><?php echo $pedido['modified']; ?></td>
-			<td><?php echo $pedido['mesa_id']; ?></td>
 			<td><?php echo $pedido['produto_id']; ?></td>
-			<td><?php echo $pedido['quantidade']; ?></td>
+			<td><?php echo $pedido['mesa_id']; ?></td>
+			<td><?php echo $pedido['status_pedido_id']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'pedidos', 'action' => 'view', $pedido['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'pedidos', 'action' => 'edit', $pedido['id'])); ?>

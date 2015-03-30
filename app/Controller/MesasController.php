@@ -55,6 +55,8 @@ class MesasController extends AppController {
 				$this->Session->setFlash(__('The mesa could not be saved. Please, try again.'));
 			}
 		}
+		$statusMesas = $this->Mesa->StatusMesa->find('list');
+		$this->set(compact('statusMesas'));
 	}
 
 /**
@@ -79,6 +81,8 @@ class MesasController extends AppController {
 			$options = array('conditions' => array('Mesa.' . $this->Mesa->primaryKey => $id));
 			$this->request->data = $this->Mesa->find('first', $options);
 		}
+		$statusMesas = $this->Mesa->StatusMesa->find('list');
+		$this->set(compact('statusMesas'));
 	}
 
 /**

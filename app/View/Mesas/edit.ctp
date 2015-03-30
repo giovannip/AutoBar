@@ -4,7 +4,7 @@
 		<legend><?php echo __('Edit Mesa'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
+		echo $this->Form->input('status_mesa_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -15,6 +15,8 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Mesa.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Mesa.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Mesas'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Status Mesas'), array('controller' => 'status_mesas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Status Mesa'), array('controller' => 'status_mesas', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Pedidos'), array('controller' => 'pedidos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Pedido'), array('controller' => 'pedidos', 'action' => 'add')); ?> </li>
 	</ul>

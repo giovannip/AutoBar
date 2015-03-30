@@ -1,20 +1,18 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Pedido Model
+ * StatusMesa Model
  *
- * @property Produto $Produto
  * @property Mesa $Mesa
- * @property StatusPedido $StatusPedido
  */
-class Pedido extends AppModel {
+class StatusMesa extends AppModel {
 
 /**
  * Use table
  *
  * @var mixed False or table name
  */
-	public $useTable = 'pedido';
+	public $useTable = 'status_mesa';
 
 /**
  * Validation rules
@@ -37,31 +35,24 @@ class Pedido extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
+ * hasMany associations
  *
  * @var array
  */
-	public $belongsTo = array(
-		'Produto' => array(
-			'className' => 'Produto',
-			'foreignKey' => 'produto_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
+	public $hasMany = array(
 		'Mesa' => array(
 			'className' => 'Mesa',
-			'foreignKey' => 'mesa_id',
+			'foreignKey' => 'status_mesa_id',
+			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
-		),
-		'StatusPedido' => array(
-			'className' => 'StatusPedido',
-			'foreignKey' => 'status_pedido_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
+
 }

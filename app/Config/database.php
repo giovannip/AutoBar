@@ -4,12 +4,9 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'root',
-		'password' => '',
+		'host' => 'srv-sqldesen-03',
+		'login' => 'sistemas',
+		'password' => 'sistemasfcav',
 		'database' => 'autobar',
-		'prefix' => '',
-		'encoding' => 'utf8'
 	);
-
 }

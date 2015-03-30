@@ -55,9 +55,10 @@ class PedidosController extends AppController {
 				$this->Session->setFlash(__('The pedido could not be saved. Please, try again.'));
 			}
 		}
-		$mesas = $this->Pedido->Mesa->find('list');
 		$produtos = $this->Pedido->Produto->find('list');
-		$this->set(compact('mesas', 'produtos'));
+		$mesas = $this->Pedido->Mesa->find('list');
+		$statusPedidos = $this->Pedido->StatusPedido->find('list');
+		$this->set(compact('produtos', 'mesas', 'statusPedidos'));
 	}
 
 /**
@@ -82,9 +83,10 @@ class PedidosController extends AppController {
 			$options = array('conditions' => array('Pedido.' . $this->Pedido->primaryKey => $id));
 			$this->request->data = $this->Pedido->find('first', $options);
 		}
-		$mesas = $this->Pedido->Mesa->find('list');
 		$produtos = $this->Pedido->Produto->find('list');
-		$this->set(compact('mesas', 'produtos'));
+		$mesas = $this->Pedido->Mesa->find('list');
+		$statusPedidos = $this->Pedido->StatusPedido->find('list');
+		$this->set(compact('produtos', 'mesas', 'statusPedidos'));
 	}
 
 /**

@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
-   RewriteBase  /autobar/
    RewriteEngine on
+   #
    RewriteRule    ^$ app/webroot/    [L]
    RewriteRule    (.*) app/webroot/$1 [L]
 </IfModule>

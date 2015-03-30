@@ -1,20 +1,18 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Pedido Model
+ * ProdutoEstoque Model
  *
  * @property Produto $Produto
- * @property Mesa $Mesa
- * @property StatusPedido $StatusPedido
  */
-class Pedido extends AppModel {
+class ProdutoEstoque extends AppModel {
 
 /**
  * Use table
  *
  * @var mixed False or table name
  */
-	public $useTable = 'pedido';
+	public $useTable = 'produto_estoque';
 
 /**
  * Validation rules
@@ -22,9 +20,9 @@ class Pedido extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+		'quantidade' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -45,20 +43,6 @@ class Pedido extends AppModel {
 		'Produto' => array(
 			'className' => 'Produto',
 			'foreignKey' => 'produto_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Mesa' => array(
-			'className' => 'Mesa',
-			'foreignKey' => 'mesa_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'StatusPedido' => array(
-			'className' => 'StatusPedido',
-			'foreignKey' => 'status_pedido_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

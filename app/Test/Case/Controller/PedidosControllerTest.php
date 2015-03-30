@@ -14,8 +14,10 @@ class PedidosControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.pedido',
+		'app.produto',
 		'app.mesa',
-		'app.produto'
+		'app.status_mesa',
+		'app.status_pedido'
 	);
 
 /**
