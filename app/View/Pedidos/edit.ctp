@@ -4,7 +4,6 @@
 		<legend><?php echo __('Edit Pedido'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
 		echo $this->Form->input('produto_id');
 		echo $this->Form->input('mesa_id');
 		echo $this->Form->input('status_pedido_id');

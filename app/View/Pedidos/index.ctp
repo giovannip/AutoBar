@@ -4,7 +4,6 @@
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th><?php echo $this->Paginator->sort('produto_id'); ?></th>
@@ -17,7 +16,6 @@
 	<?php foreach ($pedidos as $pedido): ?>
 	<tr>
 		<td><?php echo h($pedido['Pedido']['id']); ?>&nbsp;</td>
-		<td><?php echo h($pedido['Pedido']['name']); ?>&nbsp;</td>
 		<td><?php echo h($pedido['Pedido']['created']); ?>&nbsp;</td>
 		<td><?php echo h($pedido['Pedido']['modified']); ?>&nbsp;</td>
 		<td>

@@ -42,7 +42,6 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Name'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th><?php echo __('Produto Id'); ?></th>
@@ -53,7 +52,6 @@
 	<?php foreach ($mesa['Pedido'] as $pedido): ?>
 		<tr>
 			<td><?php echo $pedido['id']; ?></td>
-			<td><?php echo $pedido['name']; ?></td>
 			<td><?php echo $pedido['created']; ?></td>
 			<td><?php echo $pedido['modified']; ?></td>
 			<td><?php echo $pedido['produto_id']; ?></td>

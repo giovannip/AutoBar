@@ -1,11 +1,11 @@
 <?php
-App::uses('MesasController', 'Controller');
+App::uses('ContaMesasController', 'Controller');
 
 /**
- * MesasController Test Case
+ * ContaMesasController Test Case
  *
  */
-class MesasControllerTest extends ControllerTestCase {
+class ContaMesasControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,11 +13,13 @@ class MesasControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.conta_mesa',
 		'app.mesa',
 		'app.status_mesa',
 		'app.pedido',
 		'app.produto',
-		'app.status_pedido'
+		'app.status_pedido',
+		'app.status_conta_mesa'
 	);
 
 /**

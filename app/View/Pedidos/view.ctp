@@ -6,11 +6,6 @@
 			<?php echo h($pedido['Pedido']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($pedido['Pedido']['name']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($pedido['Pedido']['created']); ?>
